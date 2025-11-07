@@ -20,24 +20,24 @@
         <form id="formProductos">
             <label for="tipo">Tipo de Producto:</label>
             <select name="tipos" id="tipo">
-                <option value="pizza">Pizza</option>
-                <option value="bebida">Bebida</option>
-                <option value="adicional">Adicional</option>
+                <option value="Pizza">Pizza</option>
+                <option value="Bebida">Bebida</option>
+                <option value="Adicional">Adicional</option>
             </select>
 
             <label for="txtName">Nombre: </label>
             <input type="text" id="txtNombre" name="txtNombre">
-
-            <label for="txtUrl">URL del Producto:</label><input type="text" id="txtUrl" name="txtUrl">
-            <input class="subirArchivo" type="file" id="imageInput">
-            <button type="button" id="uploadButton">Subir Imagen</button>
-            <p id="mensaje" style="text-align: center; color: white;"></p>
 
             <label for="txtDesc">Descripción: </label>
             <input type="text" id="txtDescripcion" name="txtDescripcion">
 
             <label for="txtCosto">Costo($): </label>
             <input type="number" id="txtPrecio" name="txtPrecio">
+
+            <label for="txtUrl">URL de la imagen:</label><input type="text" id="txtUrl" name="txtUrl">
+            <input class="subirArchivo" type="file" id="imageInput">
+            <button type="button" id="uploadButton">Subir Imagen</button>
+            <p id="mensaje" style="text-align: center; color: black;"></p>
 
             <div id="botones">
                 <button type="button" id="btnAgregar">Agregar</button>
@@ -60,6 +60,8 @@
                     <th>Precio</th>
                 </tr>
             </thead>
+            <tbody>
+            </tbody>
         </table>
     </div>
 </div>
