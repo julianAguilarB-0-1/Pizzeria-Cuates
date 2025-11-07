@@ -138,22 +138,6 @@ hr {
     margin: 30px auto;
 }
 
-.img {
-    position:absolute;
-    left: 60px;
-    height: 100px;
-    width: auto;
-}
-
-h1{
-    margin-left: 150px;
-    text-transform: uppercase;
-}
-
-.img:hover{
-    height: 120px;
-}
-
 @media (max-width: 768px) {
     nav {
         flex-direction: column;

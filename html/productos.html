@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,32 +9,49 @@
 </head>
 
 
-    <header>
-        <nav>
-            <img class="img" src="/assets/logo.png" alt="">
-            <h1>Pizza Cuates</h1>
-            <ul>
-                <li><a href="/index.html">Inicio</a></li>
-                <li><a href="/html/productos.html">Productos</a></li>
-                <li><a href="/html/contacto.html">Contacto</a></li>
-                <li><a href="/html/sesion.html">Iniciar Sesión</a></li>
-            </ul>
-        </nav>
-    </header>
+<header>
+    <nav>
+        <img class="img" src="/assets/logo.png" alt="">
+        <h1>Pizza Cuates</h1>
+        <ul>
+            <li><a href="/index.html">Inicio</a></li>
+            <li><a href="/html/productos.html">Productos</a></li>
+            <li><a href="/html/contacto.html">Contacto</a></li>
+            <li><a href="/html/sesion.html">Iniciar Sesión</a></li>
+        </ul>
+    </nav>
+</header>
+
 <body>
     <section>
         <h2>Productos</h2>
+        <a id="pizzas"></a>
+        <hr>
+        <h2>Pizzas</h2>
+        <div id="contenedorPizzas"></div>
+        <hr>
 
-        <section id="Pizzas Populares">
-       
-        </section>
+        <a id="bebidas"></a>
+        <hr>
+        <h2>Bebidas</h2>
+        <div id="contenedorBebidas"></div>
+        <hr>
+
+        <a id="adicional"></a>
+        <hr>
+        <h2>Adicionales</h2>
+        <div id="contenedorAdicionales"></div>
+        <hr>
         
-       
+    </section>
 
+
+<script type="module" src="/js/productos.js"></script>
 </body>
 <hr>
 <footer>
-        <p>Mazatlán, Sinaloa, México </p>
-        <p>Pizza Cuates - Todos los derechos reservados</p>
+    <p>Mazatlán, Sinaloa, México </p>
+    <p>Pizza Cuates - Todos los derechos reservados</p>
 </footer>
+
 </html>
