@@ -24,10 +24,11 @@ nav {
 }
 
 nav h1 {
-    font-size: 2rem;
+    font-size: 1.8rem;
     font-weight: 700;
     color: #FFD966;
     letter-spacing: 1px;
+    margin-left: 0px;
 }
 
 nav ul {
@@ -114,15 +115,15 @@ hr {
 }
 
 .img {
-    position:absolute;
-    left: 60px;
-    height: 100px;
+
+    height: 90px;
     width: auto;
+    transition: 0.3s ease;
+
 }
 
 h1{
-    margin-left: 150px;
-    text-transform: uppercase;
+    margin-left: 1500px
 }
 
 .img:hover{
@@ -182,9 +183,70 @@ h1{
     color:#005707;
 }
 
-@media (max-width: 768px) {
+.menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.menu-btn img {
+    width: 40px;
+    filter: invert(100%);
+    transition: 0.3s;
+}
+.nav-links {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+/* logo */
+.logo-box {
+    display: flex;
+    align-items: center;
+    gap: 12px; 
+}
+
+.logo-box h1 {
+    margin: 0;
+}
+
+
+@media (max-width: 850px) {
     nav {
-        flex-direction: column;
+        flex-wrap: wrap;
+        text-align: center;
+        justify-content: center;
         gap: 10px;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .menu-btn {
+        display: block;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 90px;
+        right: 0;
+        width: 60%;
+        background: #A52820;
+        flex-direction: column;
+        padding: 15px 0;
+        border-radius: 0 0 0 12px;
+        display: none;
+    }
+
+    .nav-links.show {
+        display: flex;
+        animation: fadeIn 0.4s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(-10px); }
+        to { opacity: 1; transform: translateY(0); }
     }
 }
