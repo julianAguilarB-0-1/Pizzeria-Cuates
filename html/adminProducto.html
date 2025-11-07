@@ -16,37 +16,51 @@
 </nav>
 
 <div class="contenedor-principal">
-    <div class="contenedor-formulario">
-        <form id="formProductos">
-            <label for="tipo">Tipo de Producto:</label>
-            <select name="tipos" id="tipo">
-                <option value="Pizza">Pizza</option>
-                <option value="Bebida">Bebida</option>
-                <option value="Adicional">Adicional</option>
-            </select>
+    <div class="columna-izquierda">
+        <div class="contenedor-formulario">
+            <form id="formProductos">
+                <label for="tipo">Tipo de Producto:</label>
+                <select name="tipos" id="tipo">
+                    <option value="Pizza">Pizza</option>
+                    <option value="Bebida">Bebida</option>
+                    <option value="Adicional">Adicional</option>
+                </select>
 
-            <label for="txtName">Nombre: </label>
-            <input type="text" id="txtNombre" name="txtNombre">
+                <label for="txtName">Nombre: </label>
+                <input type="text" id="txtNombre" name="txtNombre">
 
-            <label for="txtDesc">Descripción: </label>
-            <input type="text" id="txtDescripcion" name="txtDescripcion">
+                <label for="txtDesc">Descripción: </label>
+                <input type="text" id="txtDescripcion" name="txtDescripcion">
 
-            <label for="txtCosto">Costo($): </label>
-            <input type="number" id="txtPrecio" name="txtPrecio">
+                <label for="txtCosto">Costo($): </label>
+                <input type="number" id="txtPrecio" name="txtPrecio">
 
-            <label for="txtUrl">URL de la imagen:</label><input type="text" id="txtUrl" name="txtUrl">
-            <input class="subirArchivo" type="file" id="imageInput">
-            <button type="button" id="uploadButton">Subir Imagen</button>
-            <p id="mensaje" style="text-align: center; color: black;"></p>
+                <label for="txtUrl">URL de la imagen:</label>
+                <input type="text" id="txtUrl" name="txtUrl">
 
-            <div id="botones">
-                <button type="button" id="btnAgregar">Agregar</button>
-                <button type="button" id="btnBuscar">Buscar</button>
-                <button type="button" id="btnActualizar">Actualizar</button>
-                <button type="button" id="btnBorrar">Borrar</button>
-                <button type="reset">Limpiar Formulario</button>
-            </div>
-        </form>
+                <input class="subirArchivo" type="file" id="imageInput">
+                <button type="button" id="uploadButton">Subir Imagen</button>
+                <p id="mensaje" style="text-align: center; color: black;"></p>
+
+                <div id="botones">
+                    <button type="button" id="btnAgregar">Agregar</button>
+                    <button type="button" id="btnBuscar">Buscar</button>
+                    <button type="button" id="btnActualizar">Actualizar</button>
+                    <button type="button" id="btnBorrar">Borrar</button>
+                    <button type="reset">Limpiar Formulario</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="contenedor-registro">
+            <form id="">
+                <h2>Registro Usuario</h2>
+                <input type="email" id="email" placeholder="Correo electrónico">
+                <input type="password" id="password" placeholder="Contraseña">
+                <button id="btnRegistro">Registrar</button>
+                <p id="mensaje2" style="text-align: center; color: black;"></p>
+            </form>
+        </div>
     </div>
 
     <div class="contenedor_tabla">
@@ -60,8 +74,7 @@
                     <th>Precio</th>
                 </tr>
             </thead>
-            <tbody>
-            </tbody>
+            <tbody></tbody>
         </table>
     </div>
 </div>

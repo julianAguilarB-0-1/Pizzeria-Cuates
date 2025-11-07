@@ -5,14 +5,14 @@
     box-sizing: border-box;
 }
 
-
+/* ======== CUERPO Y FONDO ======== */
 body {
     background-color: #fce9d9;
     color: #333;
     line-height: 1.6;
 }
 
-
+/* ======== NAVBAR ======== */
 nav {
     background-color: #A52820;
     color: white;
@@ -48,31 +48,23 @@ nav ul li a:hover {
     color: #ffebc1;
 }
 
-footer {
-    text-align: center;
-    background-color: #b22222;
-    color: white;
-    padding: 15px 0;
-    font-size: 14px;
-}
-
 .img {
-    position:absolute;
+    position: absolute;
     left: 60px;
     height: 100px;
     width: auto;
 }
 
-h1{
+.img:hover {
+    height: 120px;
+}
+
+h1 {
     margin-left: 150px;
     text-transform: uppercase;
 }
 
-.img:hover{
-    height: 120px;
-}
-
-
+/* ======== CONTENEDOR PRINCIPAL ======== */
 .contenedor-principal {
     display: flex;
     justify-content: space-between;
@@ -83,25 +75,29 @@ h1{
     margin: 40px auto;
 }
 
+/* ======== COLUMNA IZQUIERDA (PRODUCTO + REGISTRO) ======== */
+.columna-izquierda {
+    display: flex;
+    flex-direction: column;
+    gap: 30px; /* Espacio entre formulario de productos y de registro */
+    width: 40%;
+    min-width: 350px;
+}
+
+/* ======== FORMULARIO DE PRODUCTOS ======== */
 .contenedor-formulario {
     background-color: #fff;
     padding: 30px 40px;
     border-radius: 15px;
     box-shadow: 0 0 15px rgba(0,0,0,0.1);
-    width: 40%;
-    min-width: 350px;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
 }
 
 form {
     display: flex;
     flex-direction: column;
     gap: 15px;
-}
-
-.botones{
-    display: inline-block;
 }
 
 label {
@@ -111,6 +107,8 @@ label {
 
 input[type="text"],
 input[type="number"],
+input[type="email"],
+input[type="password"],
 select {
     padding: 10px;
     border: 2px solid #F08C32;
@@ -137,6 +135,8 @@ button {
     font-size: 1rem;
     margin: 5px;
     width: 180px;
+    cursor: pointer;
+    transition: 0.2s ease;
 }
 
 button:hover {
@@ -148,6 +148,25 @@ button:hover {
     border: none;
     padding: 10px;
     font-size: 0.9rem;
+}
+
+#mensaje {
+    text-align: center;
+    font-weight: 600;
+}
+
+/* ======== FORMULARIO DE REGISTRO ======== */
+.contenedor-registro {
+    background-color: #fff;
+    padding: 30px 40px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+
+.contenedor-registro h2 {
+    text-align: center;
+    color: #A52820;
+    margin-bottom: 15px;
 }
 
 /* ======== TABLA ======== */
@@ -165,7 +184,8 @@ button:hover {
     border-collapse: collapse;
 }
 
-#tablaProductos th, #tablaProductos td {
+#tablaProductos th, 
+#tablaProductos td {
     border: 1px solid #F08C32;
     padding: 12px;
     text-align: center;
@@ -186,7 +206,11 @@ button:hover {
     transition: 0.2s ease;
 }
 
-#mensaje {
+/* ======== FOOTER ======== */
+footer {
     text-align: center;
-    font-weight: 600;
+    background-color: #b22222;
+    color: white;
+    padding: 15px 0;
+    font-size: 14px;
 }

@@ -274,3 +274,32 @@ uploadButton.addEventListener('click', async (e) => {
         alert("Ocurrió un error al subir la imagen.");
     }
 });
+
+//registro usuario nuevo
+// Registrar usuario
+
+const btnRegistro = document.getElementById("btnRegistro");
+const emailInput = document.getElementById("email");
+const passwordInput = document.getElementById("password");
+const mensaje = document.getElementById("mensaje2");
+
+btnRegistro.addEventListener("click", async () => {
+  const email = emailInput.value.trim();
+  const password = passwordInput.value.trim();
+
+  if (!email || !password) {
+    mensaje.textContent = "Por favor ingresa correo y contraseña.";
+    return;
+  }
+
+  const { data, error } = await supabase.auth.signUp({
+    email,
+    password,
+  });
+
+  if (error) {
+    mensaje.textContent = "Error: " + error.message;
+  } else {
+    mensaje.textContent = "Registro exitoso. Verifica tu correo: " + data.user.email;
+  }
+});
