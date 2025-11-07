@@ -11,84 +11,88 @@
 <body>
 
     <nav>
+    <div class="logo-box">
         <img class="img" src="/assets/logo.png" alt="Logo">
         <h1>Pizza Cuates</h1>
-        <ul>
-            <li><a href="/index.html">Inicio</a></li>
-            <li><a href="/html/productos.html">Productos</a></li>
-            <li><a href="/html/contacto.html">Contacto</a></li>
-            <li><a href="/html/sesion.html">Iniciar Sesión</a></li>
-        </ul>
-    </nav>
+    </div>
 
-   
+    <button class="menu-btn">
+        <img src="/assets/menu.png" alt="Menu">
+    </button>
 
-    <!-- ACERCA DE NOSOTROS -->
+    <ul class="nav-links">
+        <li><a href="/index.html">Inicio</a></li>
+        <li><a href="/html/productos.html">Productos</a></li>
+        <li><a href="/html/contacto.html">Contacto</a></li>
+        <li><a href="/html/sesion.html">Iniciar Sesión</a></li>
+    </ul>
+</nav>
+
+
+
     <header>
-        <img src="/assets/logo.png" alt="Logo">
+        <img class="img2" src="/assets/logo.png" alt="Logo">
         <h2>Bienvenidos a Pizza Cuates</h2>
         <p>Una experiencia cargada de sabor y tradición.</p>
-        
     </header>
- <!-- HERO SECTION -->
+
+    
     <section class="hero">
         <div class="hero-texto">
             <h2>El sabor que une familias</h2>
-            <p>Pizzas artesanales hechas con ingredientes frescos y dedicación.</p>
+            <p>Pizzas artesanales hechas con ingredientes frescos.</p>
             <center>
             <a class="btn" href="/html/productos.html">Ver Menú</a>
-        </center>
+            </center>
         </div>
     </section>
+
     <section class="contenedor-info">
 
         <div class="card">
             <h3>¿Quiénes Somos?</h3>
-            <p>
-                Somos una pizzería familiar enfocada en ofrecer pizzas artesanales con ingredientes frescos,
-                creando un ambiente cálido donde compartir es parte del sabor.
-            </p>
+            <p>Pizzería familiar con sabor auténtico y ambiente cálido.</p>
         </div>
 
         <div class="card">
             <h3>Visión</h3>
-            <p>
-                Convertirnos en la pizzería preferida de nuestra comunidad, reconocida por nuestro sabor,
-                atención cercana y ambiente familiar.
-            </p>
+            <p>Ser la pizzería preferida de nuestra comunidad.</p>
         </div>
 
         <div class="card">
             <h3>Misión</h3>
-            <p>
-                Elaborar pizzas deliciosas y accesibles, brindando momentos especiales que unan a las personas.
-            </p>
+            <p>Unir personas creando momentos especiales.</p>
         </div>
 
         <div class="card">
             <h3>Valores</h3>
             <ul class="lista-valores">
-                <li>Honestidad y respeto</li>
+                <li>Honestidad</li>
                 <li>Servicio cálido</li>
-                <li>Calidad en cada preparación</li>
-                <li>Compromiso con la comunidad</li>
+                <li>Calidad</li>
+                <li>Compromiso</li>
             </ul>
         </div>
     </section>
 
-    <!-- UBICACIÓN Y HORARIOS -->
     <section class="ubicacion">
         <h2>Encuéntranos en</h2>
         <p>Narciso Mendoza 246, Burócratas, 82163</p>
-        <p><strong>Horario:</strong></p>
-        <p>Lunes a Domingo: 2:00 PM - 11:00 PM</p>
-        <a class="btn" href="https://www.google.com/maps" target="_blank">Abrir en Google Maps</a>
+        <p><strong>Horario:</strong> 2:00 PM - 11:00 PM</p>
     </section>
 
     <footer>
         <p>Mazatlán, Sinaloa, México</p>
-        <p>Pizza Cuates - Todos los derechos reservados 2025©</p>
+        <p>Pizza Cuates - Derechos reservados 2025©</p>
     </footer>
+
+<script>
+    const menuBtn = document.querySelector('.menu-btn');
+    const navLinks = document.querySelector('.nav-links');
+    menuBtn.addEventListener('click', () => {
+        navLinks.classList.toggle('show');
+    });
+</script>
 
 </body>
 </html>
