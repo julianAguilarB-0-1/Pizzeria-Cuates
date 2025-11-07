@@ -170,6 +170,10 @@ h1{
     margin: 15px;
 }
 
+.tarjeta-pizza:hover {
+    scale: 1.1;
+}
+
 .imagen-pizza {
     width: auto;
     height: 200px;
@@ -178,9 +182,11 @@ h1{
 }
 
 .nombre-pizza {
-    font-size: 1.3em;
+    font-size: 30px;
     color: #d62828;
     margin: 8px 0;
+    margin-bottom: 40px;
+    height: 50px;
     font-weight: bold;
 }
 
@@ -190,15 +196,15 @@ h1{
     color: #555;
     margin: 10px 0;
     height: 60px;
-    height: auto;
+    height: 130px;
     margin-bottom: 20px;
     overflow: hidden;
 }
 
 .precio-pizza {
-    font-size: 1.1em;
+    font-size: 25px;
     font-weight: bold;
-    color:#FFD966;
+    color:#005707;
 }
 
 @media (max-width: 768px) {
