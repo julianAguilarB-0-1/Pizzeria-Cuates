@@ -1,0 +1,154 @@
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fce9d9;
+    color: #3A1D00;
+}
+
+
+header {
+    background-color: #A52820;
+    color: #fff;
+    padding: 15px 0;
+    box-shadow: 0px 4px 6px rgba(0,0,0,0.2);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: auto;
+}
+
+nav h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #FFD966;
+    letter-spacing: 1px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #FFD966;
+    text-decoration: underline;
+}
+
+
+section {
+    background-color: #fff;
+    width: 60%;
+    margin: 40px auto;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+section h2 {
+    color: #A52820;
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+section p {
+    color: #7A3B12;
+    margin-bottom: 25px;
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+label {
+    align-self: flex-start;
+    margin-left: 10%;
+    font-weight: 600;
+    color: #A52820;
+}
+
+input, textarea {
+    width: 80%;
+    padding: 10px;
+    border: 2px solid #F08C32;
+    border-radius: 8px;
+    font-size: 1rem;
+    margin-top: 5px;
+    background-color: #FFF8E1;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border-color: #D9432E;
+    box-shadow: 0 0 8px rgba(217, 67, 46, 0.4);
+}
+
+
+button {
+    background-color: #D9432E;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    margin: 8px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+button:hover {
+    background-color: #A52820;
+    transform: scale(1.05);
+}
+
+
+footer {
+    background-color: #A52820;
+    color: #fff;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+}
+
+hr {
+    border: none;
+    height: 2px;
+    background-color: #D9432E;
+    width: 80%;
+    margin: 30px auto;
+}
+
+
+@media (max-width: 768px) {
+    section {
+        width: 90%;
+        padding: 20px;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    input, textarea {
+        width: 100%;
+    }
+}
