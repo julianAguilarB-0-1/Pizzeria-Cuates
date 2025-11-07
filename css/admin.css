@@ -5,14 +5,13 @@
     box-sizing: border-box;
 }
 
-/* ======== CUERPO Y FONDO ======== */
 body {
     background-color: #fce9d9;
     color: #333;
     line-height: 1.6;
 }
 
-/* ======== NAVBAR ======== */
+/* navegacion*/
 nav {
     background-color: #A52820;
     color: white;
@@ -64,7 +63,6 @@ h1 {
     text-transform: uppercase;
 }
 
-/* ======== CONTENEDOR PRINCIPAL ======== */
 .contenedor-principal {
     display: flex;
     justify-content: space-between;
@@ -75,16 +73,16 @@ h1 {
     margin: 40px auto;
 }
 
-/* ======== COLUMNA IZQUIERDA (PRODUCTO + REGISTRO) ======== */
+
 .columna-izquierda {
     display: flex;
     flex-direction: column;
-    gap: 30px; /* Espacio entre formulario de productos y de registro */
+    gap: 30px;
     width: 40%;
     min-width: 350px;
 }
 
-/* ======== FORMULARIO DE PRODUCTOS ======== */
+/* registro productos */
 .contenedor-formulario {
     background-color: #fff;
     padding: 30px 40px;
@@ -125,7 +123,7 @@ select:focus {
     box-shadow: 0 0 8px rgba(217, 67, 46, 0.4);
 }
 
-/* ======== BOTONES ======== */
+/* botones */
 button {
     background-color: #D9432E;
     color: #fff;
@@ -155,7 +153,7 @@ button:hover {
     font-weight: 600;
 }
 
-/* ======== FORMULARIO DE REGISTRO ======== */
+/* registro*/
 .contenedor-registro {
     background-color: #fff;
     padding: 30px 40px;
@@ -169,7 +167,7 @@ button:hover {
     margin-bottom: 15px;
 }
 
-/* ======== TABLA ======== */
+/*tabla*/
 .contenedor_tabla {
     background-color: #fff;
     padding: 20px;
@@ -206,11 +204,80 @@ button:hover {
     transition: 0.2s ease;
 }
 
-/* ======== FOOTER ======== */
 footer {
     text-align: center;
     background-color: #b22222;
     color: white;
     padding: 15px 0;
     font-size: 14px;
+}
+
+@media (max-width: 1024px) {
+    .contenedor-principal {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .columna-izquierda, 
+    .contenedor_tabla {
+        width: 100%;
+    }
+
+    nav ul {
+        gap: 15px;
+    }
+
+    nav h1 {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .img {
+        position: static;
+        height: 80px;
+        margin-bottom: 10px;
+    }
+
+    .contenedor-formulario,
+    .contenedor-registro {
+        padding: 20px;
+    }
+
+    button {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    nav h1 {
+        font-size: 1.2rem;
+    }
+
+    label {
+        font-size: 0.9rem;
+    }
+
+    input, select {
+        font-size: 0.9rem;
+    }
+
+    #tablaProductos th, 
+    #tablaProductos td {
+        padding: 8px;
+        font-size: 0.85rem;
+    }
 }
