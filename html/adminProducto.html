@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Administrador de Productos</title>
+    <link rel="stylesheet" href="/css/admin.css">
 </head>
 <nav>
     <img class="img" src="/assets/logo.png" alt="">
@@ -16,8 +17,8 @@
     </ul>
 </nav>
 
-<div>
-    <div>
+<div class="contenedor-principal">
+    <div class="contenedor-formulario">
         <form id="formProductos">
             <label for="tipo">Tipo de Producto:</label>
             <select name="tipos" id="tipo">
@@ -30,7 +31,7 @@
             <input type="text" id="txtNombre" name="txtNombre">
 
             <label for="txtUrl">URL del Producto:</label><input type="text" id="txtUrl" name="txtUrl">
-            <input class="subirArchivo" type="file" id="imageInput"> 
+            <input class="subirArchivo" type="file" id="imageInput">
             <button type="button" id="uploadButton">Subir Imagen</button>
             <p id="mensaje" style="text-align: center; color: white;"></p>
 
@@ -40,11 +41,13 @@
             <label for="txtCosto">Costo($): </label>
             <input type="number" id="txtPrecio" name="txtPrecio">
 
-            <button type="button" id="btnAgregar">Agregar</button>
-            <button type="button" id="btnBuscar">Buscar</button>
-            <button type="button" id="btnActualizar">Actualizar</button>
-            <button type="button" id="btnBorrar">Borrar</button>
-            <button type="reset">Limpiar Formulario</button>
+            <div id="botones">
+                <button type="button" id="btnAgregar">Agregar</button>
+                <button type="button" id="btnBuscar">Buscar</button>
+                <button type="button" id="btnActualizar">Actualizar</button>
+                <button type="button" id="btnBorrar">Borrar</button>
+                <button type="reset">Limpiar Formulario</button>
+            </div>
         </form>
     </div>
 
