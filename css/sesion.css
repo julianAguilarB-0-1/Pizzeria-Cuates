@@ -64,14 +64,6 @@ button {
   background-color: #b71c1c;
 }
 
-#btnRegistro {
-  background-color: #2e7d32;
-  color: white;
-}
-#btnRegistro:hover {
-  background-color: #1b5e20;
-}
-
 #mensaje {
   margin-top: 15px;
   font-size: 14px;

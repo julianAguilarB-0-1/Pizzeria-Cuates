@@ -38,11 +38,7 @@ function crearTarjeta(data) {
         <p class="desc-pizza">${descripcion}</p>
         <div class="pie-tarjeta">
             <span class="precio-pizza">${precio}</span>
-        </div>
-    `;
-
- 
-
+        </div>`;
     return tarjeta;
 }
 
