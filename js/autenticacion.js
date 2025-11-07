@@ -57,6 +57,6 @@ btnLogin.addEventListener("click", async () => {
   } else {
     mensaje.textContent = "Bienvenido " + data.user.email;
     // Cambiar a admin
-    window.location.href = "https://pizzeria-cuates.netlify.app/html/sesion";
+    window.location.href = "https://pizzeria-cuates.netlify.app/html/adminproducto";
   }
 });
