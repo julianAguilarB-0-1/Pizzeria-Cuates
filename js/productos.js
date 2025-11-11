@@ -90,3 +90,10 @@ function cargarPizzasPorTipo() {
 }
 
 window.addEventListener("load", cargarPizzasPorTipo);
+
+// para el despliegue del menu
+    const menuBtn = document.querySelector('.menu-btn');
+    const navLinks = document.querySelector('.nav-links');
+    menuBtn.addEventListener('click', () => {
+        navLinks.classList.toggle('show');
+    });
