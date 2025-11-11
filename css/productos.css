@@ -1,27 +1,28 @@
-
-body {
+* {
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #fce9d9;
-    color: #3A1D00;
+    box-sizing: border-box;
 }
 
-
-header {
-    background-color: #A52820;
-    color: #fff;
-    padding: 15px 0;
-    box-shadow: 0px 4px 6px rgba(0,0,0,0.2);
+body {
+    background-color: #fce9d9;
+    color: #333;
+    line-height: 1.6;
 }
 
 nav {
+    background-color: #A52820;
+    color: white;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 90%;
-    margin: auto;
+    padding: 18px 40px;
+    width: 100%;
+    position: relative;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
 }
+
 
 nav h1 {
     font-size: 1.8rem;
@@ -29,12 +30,11 @@ nav h1 {
     color: #FFD966;
     letter-spacing: 1px;
     margin-left: 0px;
+    
 }
 
 nav ul {
     list-style: none;
-    display: flex;
-    gap: 25px;
 }
 
 nav ul li a {
@@ -46,7 +46,6 @@ nav ul li a {
 
 nav ul li a:hover {
     color: #FFD966;
-    text-decoration: underline;
 }
 
 
@@ -115,19 +114,13 @@ hr {
 }
 
 .img {
-
     height: 90px;
     width: auto;
     transition: 0.3s ease;
-
 }
 
-h1{
-    margin-left: 1500px
-}
-
-.img:hover{
-    height: 120px;
+.img:hover {
+    transform: scale(1.2);
 }
 
 /*tarjeta*/
@@ -204,7 +197,7 @@ h1{
 .logo-box {
     display: flex;
     align-items: center;
-    gap: 12px; 
+    gap: 12px;
 }
 
 .logo-box h1 {
