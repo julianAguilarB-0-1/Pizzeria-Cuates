@@ -23,24 +23,6 @@ function formatearPrecio(valor) {
     return `$${Number(valor).toFixed(2)}`;
 }
 
-function crearTarjeta(data) {
-    const url = data.urlImg || "";
-    const nombre = data.nombre || "Sin nombre";
-    const descripcion = data.descripcion || "";
-    const precio = formatearPrecio(data.costo);
-
-    const tarjeta = document.createElement("div");
-    tarjeta.className = "tarjeta-pizza";
-
-    tarjeta.innerHTML = `
-        <img class="imagen-pizza" src="${url}" alt="${nombre}" loading="lazy" width="250" onerror="this.src='/assets/placeholder.png'">
-        <h3 class="nombre-pizza">${nombre}</h3>
-        <p class="desc-pizza">${descripcion}</p>
-        <div class="pie-tarjeta">
-            <span class="precio-pizza">${precio}</span>
-        </div>`;
-    return tarjeta;
-}
 
 function cargarPizzasPorTipo() {
     console.log("Cargando Pizzeria desde Firebase...");
@@ -60,6 +42,11 @@ function cargarPizzasPorTipo() {
     contAdicionales.innerHTML = "";
 
     onValue(dbRef, (snapshot) => {
+
+        contPizzas.innerHTML = "";
+        contBebidas.innerHTML = "";
+        contAdicionales.innerHTML = "";
+
         if (!snapshot.exists()) {
             console.log("No hay productos en Pizzeria/");
             return;
@@ -70,7 +57,21 @@ function cargarPizzasPorTipo() {
 
             const tipo = (data.tipoProducto || "").toString().trim().toLowerCase();
 
-            const tarjeta = crearTarjeta(data);
+            const url = data.urlImg || "";
+            const nombre = data.nombre || "Sin nombre";
+            const descripcion = data.descripcion || "";
+            const precio = formatearPrecio(data.costo);
+
+            const tarjeta = document.createElement("div");
+            tarjeta.className = "tarjeta-pizza";
+
+            tarjeta.innerHTML = `
+        <img class="imagen-pizza" src="${url}" alt="${nombre}" loading="lazy" width="250" onerror="this.src='/assets/placeholder.png'">
+        <h3 class="nombre-pizza">${nombre}</h3>
+        <p class="desc-pizza">${descripcion}</p>
+        <div class="pie-tarjeta">
+            <span class="precio-pizza">${precio}</span>
+        </div>`;
 
             if (tipo === "pizza" || tipo === "pizzas") {
                 contPizzas.appendChild(tarjeta);
@@ -89,9 +90,3 @@ function cargarPizzasPorTipo() {
 }
 
 window.addEventListener("load", cargarPizzasPorTipo);
-
-    const menuBtn = document.querySelector('.menu-btn');
-    const navLinks = document.querySelector('.nav-links');
-    menuBtn.addEventListener('click', () => {
-        navLinks.classList.toggle('show');
-    });
