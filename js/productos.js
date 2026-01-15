@@ -5,13 +5,14 @@ import { getDatabase, onValue, ref as refS, set, child, get, update, remove }
 
 // Configuracion de la cuenta
 const firebaseConfig = {
-    apiKey: "AIzaSyA5pisgK31mDQnqUSBlccZZTcGPsvgpbLs",
-    authDomain: "proyectowebfinal-ee0c5.firebaseapp.com",
-    databaseURL: "https://proyectowebfinal-ee0c5-default-rtdb.firebaseio.com",
-    projectId: "proyectowebfinal-ee0c5",
-    storageBucket: "proyectowebfinal-ee0c5.firebasestorage.app",
-    messagingSenderId: "1085156049377",
-    appId: "1:1085156049377:web:d437c5151a5cd5dbad12a0"
+  apiKey: "AIzaSyAbX9ri3W-0_4bi1Q2SauGp68BH6dYdT0I",
+  authDomain: "pipsas-b31ef.firebaseapp.com",
+  databaseURL: "https://pipsas-b31ef-default-rtdb.firebaseio.com",
+  projectId: "pipsas-b31ef",
+  storageBucket: "pipsas-b31ef.firebasestorage.app",
+  messagingSenderId: "739097515498",
+  appId: "1:739097515498:web:0b8eb98251ecb93ff04e93",
+  measurementId: "G-7KLZVZR1D9"
 };
 
 // Iniciar Firebase
