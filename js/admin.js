@@ -1,11 +1,9 @@
-// Import the functions you need from the SDKs you need
-import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
+import { initializeApp } from "https://www.gstatic.com/firebasejs/12.4.0/firebase-app.js";
 
-// Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+import { getDatabase, onValue, ref as refS, set, child, get, update, remove }
+    from "https://www.gstatic.com/firebasejs/12.4.0/firebase-database.js";
+
+// Configuracion de la cuenta
 const firebaseConfig = {
   apiKey: "AIzaSyAbX9ri3W-0_4bi1Q2SauGp68BH6dYdT0I",
   authDomain: "pipsas-b31ef.firebaseapp.com",
@@ -17,9 +15,9 @@ const firebaseConfig = {
   measurementId: "G-7KLZVZR1D9"
 };
 
-// Initialize Firebase
+// Iniciar Firebase
 const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
+const db = getDatabase(app);
 
 /// Variables globales
 var tipoProducto = "";
