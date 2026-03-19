@@ -1,23 +1,22 @@
-import { initializeApp } from "https://www.gstatic.com/firebasejs/12.4.0/firebase-app.js";
 
-import { getDatabase, onValue, ref as refS, set, child, get, update, remove }
-    from "https://www.gstatic.com/firebasejs/12.4.0/firebase-database.js";
+import { initializeApp } from "https://www.gstatic.com/firebasejs/12.11.0/firebase-app.js";
+import { getDatabase, ref as refS, set, onValue, get, child, remove, update } from "https://www.gstatic.com/firebasejs/12.11.0/firebase-database.js";
 
-// Configuracion de la cuenta
+// Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyAbX9ri3W-0_4bi1Q2SauGp68BH6dYdT0I",
-  authDomain: "pipsas-b31ef.firebaseapp.com",
-  databaseURL: "https://pipsas-b31ef-default-rtdb.firebaseio.com",
-  projectId: "pipsas-b31ef",
-  storageBucket: "pipsas-b31ef.firebasestorage.app",
-  messagingSenderId: "739097515498",
-  appId: "1:739097515498:web:0b8eb98251ecb93ff04e93",
-  measurementId: "G-7KLZVZR1D9"
+    apiKey: "AIzaSyCVHkQ6Qj-cIaGtYsd87QEFDPvNebczcy8",
+    authDomain: "pizzeria-6d9f4.firebaseapp.com",
+    databaseURL: "https://pizzeria-6d9f4-default-rtdb.firebaseio.com",
+    projectId: "pizzeria-6d9f4",
+    storageBucket: "pizzeria-6d9f4.firebasestorage.app",
+    messagingSenderId: "970237268337",
+    appId: "1:970237268337:web:75e8761a4a674158dd26d0"
 };
 
-// Iniciar Firebase
+// Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const db = getDatabase(app);
+
 
 function formatearPrecio(valor) {
     if (valor === undefined || valor === null || isNaN(valor)) return "N/A";
@@ -93,8 +92,8 @@ function cargarPizzasPorTipo() {
 window.addEventListener("load", cargarPizzasPorTipo);
 
 // para el despliegue del menu
-    const menuBtn = document.querySelector('.menu-btn');
-    const navLinks = document.querySelector('.nav-links');
-    menuBtn.addEventListener('click', () => {
-        navLinks.classList.toggle('show');
-    });
+const menuBtn = document.querySelector('.menu-btn');
+const navLinks = document.querySelector('.nav-links');
+menuBtn.addEventListener('click', () => {
+    navLinks.classList.toggle('show');
+});

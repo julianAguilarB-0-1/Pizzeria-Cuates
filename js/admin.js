@@ -1,23 +1,22 @@
-import { initializeApp } from "https://www.gstatic.com/firebasejs/12.4.0/firebase-app.js";
 
-import { getDatabase, onValue, ref as refS, set, child, get, update, remove }
-    from "https://www.gstatic.com/firebasejs/12.4.0/firebase-database.js";
+import { initializeApp } from "https://www.gstatic.com/firebasejs/12.11.0/firebase-app.js";
+import { getDatabase, ref as refS, set, onValue, get, child, remove, update } from "https://www.gstatic.com/firebasejs/12.11.0/firebase-database.js";
 
-// Configuracion de la cuenta
+// Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyAbX9ri3W-0_4bi1Q2SauGp68BH6dYdT0I",
-  authDomain: "pipsas-b31ef.firebaseapp.com",
-  databaseURL: "https://pipsas-b31ef-default-rtdb.firebaseio.com",
-  projectId: "pipsas-b31ef",
-  storageBucket: "pipsas-b31ef.firebasestorage.app",
-  messagingSenderId: "739097515498",
-  appId: "1:739097515498:web:0b8eb98251ecb93ff04e93",
-  measurementId: "G-7KLZVZR1D9"
+    apiKey: "AIzaSyCVHkQ6Qj-cIaGtYsd87QEFDPvNebczcy8",
+    authDomain: "pizzeria-6d9f4.firebaseapp.com",
+    databaseURL: "https://pizzeria-6d9f4-default-rtdb.firebaseio.com",
+    projectId: "pizzeria-6d9f4",
+    storageBucket: "pizzeria-6d9f4.firebasestorage.app",
+    messagingSenderId: "970237268337",
+    appId: "1:970237268337:web:75e8761a4a674158dd26d0"
 };
 
-// Iniciar Firebase
+// Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const db = getDatabase(app);
+
 
 /// Variables globales
 var tipoProducto = "";
@@ -297,22 +296,22 @@ const btnRegistro = document.getElementById("btnRegistro");
 
 //Registrar usuario
 btnRegistro.addEventListener("click", async () => {
-  const email = emailInput.value.trim();
-  const password = passwordInput.value.trim();
+    const email = emailInput.value.trim();
+    const password = passwordInput.value.trim();
 
-  if (!email || !password) {
-    mensaje.textContent = "Por favor ingresa correo y contraseña.";
-    return;
-  }
+    if (!email || !password) {
+        mensaje.textContent = "Por favor ingresa correo y contraseña.";
+        return;
+    }
 
-  const { data, error } = await supabase.auth.signUp({
-    email,
-    password,
-  });
+    const { data, error } = await supabase.auth.signUp({
+        email,
+        password,
+    });
 
-  if (error) {
-    mensaje.textContent = "Error: " + error.message;
-  } else {
-    mensaje.textContent = "Registro exitoso. Verifica tu correo: " + data.user.email;
-  }
+    if (error) {
+        mensaje.textContent = "Error: " + error.message;
+    } else {
+        mensaje.textContent = "Registro exitoso. Verifica tu correo: " + data.user.email;
+    }
 });
